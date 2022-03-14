@@ -1,9 +1,8 @@
+import 'package:analog_clock/database_helper.dart';
+import 'package:analog_clock/models/todo.dart';
+import 'package:analog_clock/widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:what_to_do/database_helper.dart';
-import 'package:what_to_do/models/todo.dart';
-import 'package:what_to_do/widgets.dart';
 import '../models/task.dart';
-import 'package:what_to_do/main.dart';
 import 'package:flutter/widgets.dart';
 
 class Taskpage extends StatefulWidget {

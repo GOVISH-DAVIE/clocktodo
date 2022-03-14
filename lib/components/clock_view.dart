@@ -5,7 +5,7 @@ import 'package:analog_clock/utils/time.dart';
 import 'package:flutter/material.dart';
 
 class ClockView extends StatefulWidget {
-  ClockView(this.time, {Key? key}) : super(key: key);
+  ClockView(this.time, {Key key}) : super(key: key);
   DataTime time;
   @override
   _ClockViewState createState() => _ClockViewState();
@@ -33,17 +33,17 @@ class _ClockViewState extends State<ClockView> {
 // creating the Clock Painter Class
 
 class ClockPainter extends CustomPainter {
-  int? seconds;
-  int? minutes;
-  int? hours;
+  int seconds;
+  int minutes;
+  int hours;
   ClockPainter(this.hours, this.minutes, this.seconds);
 
   @override
   void paint(Canvas canvas, Size size) {
     //setting the time conversion
-    double secRad = ((pi / 2) - (pi / 30) * this.seconds!) % (2 * pi);
-    double minRad = ((pi / 2) - (pi / 30) * this.minutes!) % (2 * pi);
-    double hourRad = ((pi / 2) - (pi / 6) * this.hours!) % (2 * pi);
+    double secRad = ((pi / 2) - (pi / 30) * this.seconds) % (2 * pi);
+    double minRad = ((pi / 2) - (pi / 30) * this.minutes) % (2 * pi);
+    double hourRad = ((pi / 2) - (pi / 6) * this.hours) % (2 * pi);
 
     // cetting the Center point coordinates
     var centerX = size.width / 2;
